@@ -100,7 +100,7 @@ export default class HTML2PDF extends Client {
   convertHTMLToPDF(url: string, options:Partial<PDFConvertOptions> = {}) {
     let opts = options as CallOptions
 
-    opts.url = url
+    opts.html = url
 
     return this.request("/convert", { method: "POST", encoding: null, json: opts })
   }

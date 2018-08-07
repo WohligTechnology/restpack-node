@@ -63,7 +63,7 @@ var HTML2PDF = /** @class */ (function (_super) {
     HTML2PDF.prototype.convertHTMLToPDF = function (url, options) {
         if (options === void 0) { options = {}; }
         var opts = options;
-        opts.url = url;
+        opts.html = url;
         return this.request("/convert", { method: "POST", encoding: null, json: opts });
     };
     return HTML2PDF;
